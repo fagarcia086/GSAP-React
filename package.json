@@ -1,7 +1,7 @@
 {
   "name": "@chacrasoftware/gsap-react",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Collection of React utilities and hooks for GSAP",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -47,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidkhierl/gsap-react"
+    "url": "https://github.com/chacrasoftware/gsap-react"
   },
   "bugs": {
-    "url": "https://github.com/davidkhierl/gsap-react/issues"
+    "url": "https://github.com/chacrasoftware/gsap-react/issues"
   }
 }
