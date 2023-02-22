@@ -1,5 +1,5 @@
 {
-  "name": "@chacra/gsap-react",
+  "name": "@chacrasoftware/gsap-react",
   "private": false,
   "version": "1.0.0",
   "description": "Collection of React utilities and hooks for GSAP",
