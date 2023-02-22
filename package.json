@@ -1,0 +1,55 @@
+{
+  "name": "@chacra/gsap-react",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Collection of React utilities and hooks for GSAP",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs --target es5",
+    "build:esm": "tsc -p tsconfig.build.json --module esNext --outDir dist/esm --target es6",
+    "clean": "rimraf -rf ./dist",
+    "prebuild": "pnpm clean",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "gsap",
+    "hooks",
+    "react",
+    "typescript"
+  ],
+  "author": "David Khierl <david.khierl@chacrasoftware.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.27",
+    "eslint": "^8.33.0",
+    "gsap": "^3.11.4",
+    "prettier": "^2.8.3",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^4.1.2",
+    "semantic-release": "^20.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "gsap": "^3.11.4",
+    "react": "^16 || ^17 || ^18",
+    "react-dom": "^16.8.0  || ^17.0.0 || ^18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidkhierl/gsap-react"
+  },
+  "bugs": {
+    "url": "https://github.com/davidkhierl/gsap-react/issues"
+  }
+}
