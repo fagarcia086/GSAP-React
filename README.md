@@ -1,6 +1,6 @@
 # GSAP React
 
-![npm](https://img.shields.io/npm/v/gsap-react)
+![npm](https://img.shields.io/npm/v/@chacra/gsap-react)
 
 ## Collection of React utilities and hooks for GSAP.
 
