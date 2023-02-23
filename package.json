@@ -1,5 +1,5 @@
 {
-  "name": "@chacrasoftware/gsap-react",
+  "name": "@chacra/gsap-react",
   "private": false,
   "version": "0.0.0-development",
   "description": "Collection of React utilities and hooks for GSAP",
@@ -19,6 +19,7 @@
     "semantic-release": "semantic-release"
   },
   "keywords": [
+    "chacra software",
     "gsap",
     "hooks",
     "react",
