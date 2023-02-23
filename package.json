@@ -1,7 +1,7 @@
 {
   "name": "@chacra/gsap-react",
   "private": false,
-  "version": "0.0.0-development",
+  "version": "v1.0,0",
   "description": "Collection of React utilities and hooks for GSAP",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
