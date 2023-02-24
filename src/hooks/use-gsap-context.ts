@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import { MutableRefObject, useMemo } from 'react'
-import { useIsomorphicLayoutEffect } from 'src/hooks/use-isomorphic-layout-effect'
+import { useIsomorphicLayoutEffect } from '../hooks/use-isomorphic-layout-effect'
 
 export function useGsapContext<T = any>(
   scope: MutableRefObject<T>,
