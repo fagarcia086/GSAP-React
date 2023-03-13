@@ -5,15 +5,16 @@ import {
   SmoothScrollWrapperProps,
 } from './smooth-scroll-wrapper'
 
-export interface SmoothScrollProps {
+export interface SmoothScrollProps extends SmoothScrollWrapperProps {
   children?: ReactNode
-  options?: SmoothScrollWrapperProps['options']
 }
 
 export function SmoothScroll(props: SmoothScrollProps) {
   return (
     <SmoothScrollProvider>
-      <SmoothScrollWrapper options={props.options}>
+      <SmoothScrollWrapper
+        options={props.options}
+        noInitialWrapper={props.noInitialWrapper}>
         {props.children}
       </SmoothScrollWrapper>
     </SmoothScrollProvider>
