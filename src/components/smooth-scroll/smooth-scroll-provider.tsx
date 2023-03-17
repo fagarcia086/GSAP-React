@@ -13,14 +13,9 @@ export function SmoothScrollProvider({
   children,
   defaultValue,
 }: SmoothScrollProviderProps) {
-  const [isSmootherReady, setIsSmootherReady] = useState(
-    defaultValue?.isSmootherReady ?? false
-  )
+  const [smoother, setSmoother] = useState(defaultValue?.smoother ?? null)
 
-  const value = useMemo(
-    () => ({ isSmootherReady, setIsSmootherReady }),
-    [isSmootherReady]
-  )
+  const value = useMemo(() => ({ smoother, setSmoother }), [smoother])
 
   return (
     <SmoothScrollContext.Provider value={value}>
