@@ -1,8 +1,8 @@
 import { createContext, Dispatch, SetStateAction } from 'react'
 
 export interface ISmoothScrollContext {
-  isSmootherReady: boolean
-  setIsSmootherReady: Dispatch<SetStateAction<boolean>>
+  smoother: ScrollSmoother | null
+  setSmoother: Dispatch<SetStateAction<ScrollSmoother | null>>
 }
 
 export const SmoothScrollContext = createContext<

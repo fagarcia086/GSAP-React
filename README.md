@@ -300,12 +300,12 @@ import { useIsomorphicLayoutEffect, useSmoothScroll } from 'gsap-react'
 import { useRef } from 'react'
 
 function MyComponent() {
-  const { isSmootherReady } = useSmoothScroll()
+  const { smoother } = useSmoothScroll()
 
   const ref = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
-    if (!isSmootherReady) return
+    if (!smoother) return
 
     let ctx = gsap.context(() => {
       gsap.to('.box', {
@@ -317,7 +317,7 @@ function MyComponent() {
     }, ref)
 
     return () => ctx.revert()
-  }, [isSmootherReady])
+  }, [smoother])
 
   return (
     <div ref={ref}>

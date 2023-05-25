@@ -20,24 +20,27 @@ export const SmoothScrollWrapper = forwardRef<
   HTMLDivElement,
   SmoothScrollWrapperProps & HTMLAttributes<HTMLDivElement>
 >(({ children, options, noInitialWrapper, ...props }, ref) => {
-  const { setIsSmootherReady } = useSmoothScroll()
+  const { setSmoother } = useSmoothScroll()
 
   useIsomorphicLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
     let ctx = gsap.context(() => {
-      ScrollSmoother.create({
+      const smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
         ...options,
       })
-    })
 
-    setIsSmootherReady(true)
+      setSmoother(smoother)
+
+      return () => {
+        setSmoother(null)
+      }
+    })
 
     return () => {
       ctx.revert()
-      setIsSmootherReady(false)
     }
   }, [])
 
