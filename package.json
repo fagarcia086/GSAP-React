@@ -14,9 +14,10 @@
     "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs --target es5",
     "build:esm": "tsc -p tsconfig.build.json --module esNext --outDir dist/esm --target es6",
     "clean": "rimraf -rf ./dist",
+    "release": "pnpm build && pnpm publish",
     "prebuild": "pnpm clean",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "semantic-release": "semantic-release"
+    "publish": "changeset publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "chacra software",
@@ -28,6 +29,7 @@
   "author": "David Khierl <david.khierl@chacrasoftware.com>",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/node": "^18.13.0",
     "@types/react": "^18.0.27",
     "eslint": "^8.33.0",
@@ -37,7 +39,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.1.2",
-    "semantic-release": "^20.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
